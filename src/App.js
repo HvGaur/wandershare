@@ -3,12 +3,15 @@ import './App.css';
 
 import Users from './user/pages/Users';
 import NewPlace from './places/pages/NewPlace';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
 
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 const App = () => {
   return (
   <Router>
+    <MainNavigation />
+    <main>
   <Switch>
     <Route path = "/" exact> {/* or <Route path = "/" exact = {true }element = {Users} />*/}
       <Users />
@@ -20,6 +23,7 @@ const App = () => {
 
     <Redirect to="/" />
   </Switch>
+  </main>
   </Router>
   );
 }
