@@ -18,6 +18,7 @@
 }
 
 .main-navigation__title {
+  text-decoration: underline;
   color: white;
 }
 

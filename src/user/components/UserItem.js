@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import "./UserItem.css";
 import Avatar from "../../shared/components/UIElements/Avatar";
 import Card from "../../shared/components/UIElements/Card"
-import reactRouterDom from "react-router-dom";
 
 const UserItem = props => {
     return (
@@ -21,7 +20,7 @@ const UserItem = props => {
             </Link>
             </Card>
         </li>
-        
+
     );
 };
 
