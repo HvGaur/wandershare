@@ -5,8 +5,12 @@ import Users from './user/pages/Users';
 import NewPlace from './places/pages/NewPlace';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import UserPlaces from './places/pages/UserPlaces';
+import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+
 
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+
+mapboxgl.accessToken = 'pk.eyJ1IjoidnhyZGh4biIsImEiOiJjbHowZGlvcG4ybjlhMmxzZ3J1bnF2NnFhIn0.zKLnfiTWhX9vVaGv-ScF9g';
 
 const App = () => {
   return (

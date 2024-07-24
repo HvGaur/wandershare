@@ -1,4 +1,10 @@
+@font-face {
+  font-family: Brico;
+  src: url(../../../../fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
 .card {
+  font-family: Brico;
   position: relative;
   margin: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
