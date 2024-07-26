@@ -9,33 +9,32 @@ import {
 } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import './PlaceForm.css';
+import Card from '../../shared/components/UIElements/Card';
 
 const DUMMY_PLACES = [
   {
-    id: 'p1',
-    title: 'Empire State Building',
-    description: 'One of the most famous sky scrapers in the world!',
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYC_Empire_State_Building.jpg/640px-NYC_Empire_State_Building.jpg',
-    address: '20 W 34th St, New York, NY 10001',
-    location: {
-      lat: 40.7484405,
-      lng: -73.9878584
-    },
-    creator: 'u1'
+      id: 'p1',
+      title: 'Mehrangarh',
+      description: 'Biggest Fort in India, second largest in the world!!',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Mehrangarh_Fort_sanhita.jpg',
+      address: 'Sodagaran Mohalla, Jodhpur, Rajasthan 342001',
+      location: {
+          lat: '26.2977052',
+          lng: '73.0176366'
+      },
+      creator: 'u1'
   },
   {
-    id: 'p2',
-    title: 'Empire State Building',
-    description: 'One of the most famous sky scrapers in the world!',
-    imageUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYC_Empire_State_Building.jpg/640px-NYC_Empire_State_Building.jpg',
-    address: '20 W 34th St, New York, NY 10001',
-    location: {
-      lat: 40.7484405,
-      lng: -73.9878584
-    },
-    creator: 'u2'
+      id: 'p2',
+      title: 'Mehrangarh 2',
+      description: 'Biggest Fort in India, second largest in the world!!',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Jodhpur_mehrangarh_fort.jpg/1600px-Jodhpur_mehrangarh_fort.jpg',
+      address: 'Sodagaran Mohalla, Jodhpur, Rajasthan 342001',
+      location: {
+          lat: '26.2977052',
+          lng: '73.0176366'
+      },
+      creator: 'u2'
   }
 ];
 
@@ -60,19 +59,22 @@ const UpdatePlace = () => {
   const identifiedPlace = DUMMY_PLACES.find(p => p.id === placeId);
 
   useEffect(() => {
-    setFormData(
-      {
-        title: {
-          value: identifiedPlace.title,
-          isValid: true
+    if(identifiedPlace){
+      setFormData(
+        {
+          title: {
+            value: identifiedPlace.title,
+            isValid: true
+          },
+          description: {
+            value: identifiedPlace.description,
+            isValid: true
+          }
         },
-        description: {
-          value: identifiedPlace.description,
-          isValid: true
-        }
-      },
-      true
-    );
+        true
+      );
+    }
+
     setIsLoading(false);
   }, [setFormData, identifiedPlace]);
 
@@ -84,7 +86,7 @@ const UpdatePlace = () => {
   if (!identifiedPlace) {
     return (
       <div className="center">
-        <h2>Could not find place!</h2>
+        <Card><h2>Could not find place!</h2></Card>
       </div>
     );
   }
