@@ -1,4 +1,5 @@
 {
+  "homepage": "https://hvgaur.github.io/wandershare",
   "name": "wandershare",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +17,7 @@
     "react-transition-group": "^4.4.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://hvgaur.github.io/wandershare",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
