@@ -58,7 +58,10 @@
 
   .delete-modal__buttons{
     /* align-items: center; */
-    margin: 0;
+    /* margin-right: 1rem; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
   }
 
