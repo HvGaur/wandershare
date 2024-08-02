@@ -3,10 +3,7 @@ import React from 'react';
 import Card from '../../shared/components/UIElements/Card';
 import Input from '../../shared/components/FormElements/Input';
 import Button from '../../shared/components/FormElements/Button';
-import {
-  VALIDATOR_EMAIL,
-  VALIDATOR_MINLENGTH
-} from '../../shared/util/validators';
+import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from '../../shared/util/validators';
 import { useForm } from '../../shared/hooks/form-hook';
 import './Auth.css';
 
