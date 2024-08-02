@@ -52,16 +52,18 @@ const PlaceItem = props => {
         footerClass="place-item__modal-actions"
         footer={
           <React.Fragment>
+            <div className="delete-modal__buttons">
             <Button inverse onClick={cancelDeleteHandler}>
               CANCEL
             </Button>
             <Button danger onClick={confirmDeleteHandler}>
               DELETE
             </Button>
+            </div>
           </React.Fragment>
         }
       >
-        <p>
+        <p className="delete-modal__message">
           Are you sure you want to delete this post?
         </p>
       </Modal>

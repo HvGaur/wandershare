@@ -52,6 +52,16 @@
     margin: 0.5rem;
   }
 
+  .delete-modal__message{
+    text-align: center;
+  }
+
+  .delete-modal__buttons{
+    /* align-items: center; */
+    margin: 0;
+    text-align: center;
+  }
+
   .map-container{
     height: 20rem;
     width: 100%;
