@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Grico;
+  src: url(../../../fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
 .authentication__header {
   color: white;
   text-align: center;
@@ -17,6 +22,9 @@
 }
 
 .login-signup__link{
+  font-family: Grico;
+  background: none;
+  border: none;
   cursor:pointer;
   text-decoration: underline;
 }
